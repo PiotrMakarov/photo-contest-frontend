@@ -3,9 +3,9 @@ import { getContest } from "@/lib/api";
 import SubmitEntryForm from "./SubmitEntryForm";
 
 export async function generateMetadata({ params }) {
-  const { contestId } = await params;
+  const { id } = await params;
   try {
-    const contest = await getContest(contestId);
+    const contest = await getContest(id);
     return {
       title: `Подать заявку — ${contest.name}`,
       description: contest.description,
@@ -16,14 +16,15 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function SubmitEntryPage({ params }) {
-  const { contestId } = await params;
+  const { id } = await params;
 
   let contest;
   try {
-    contest = await getContest(contestId);
+    contest = await getContest(id);
   } catch {
     notFound();
   }
 
   return <SubmitEntryForm contest={contest} />;
 }
+
