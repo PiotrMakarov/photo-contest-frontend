@@ -103,6 +103,7 @@ export default function Home() {
           );
           if (nextIndex !== -1) {
             setCurrentPhotoIndex(nextIndex);
+            window.scrollTo(0, 0);
           }
         }
       }
@@ -114,6 +115,7 @@ export default function Home() {
       const previousIndex = ratingHistory[ratingHistory.length - 1];
       setCurrentPhotoIndex(previousIndex);
       setRatingHistory(ratingHistory.slice(0, -1));
+      window.scrollTo(0, 0);
     }
   };
 

@@ -7,8 +7,11 @@ const geologica = Geologica({
 });
 
 export const metadata = {
-  title: "Фотоконкурс",
-  description: "Большая уральская тропа - фотоконкурс",
+  title: {
+    default: "Фотоконкурс",
+    template: "%s | Фотоконкурс",
+  },
+  description: "Платформа для проведения фотоконкурсов",
 };
 
 export default function RootLayout({ children }) {
