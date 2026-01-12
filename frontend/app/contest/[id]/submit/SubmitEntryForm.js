@@ -89,16 +89,6 @@ export default function SubmitEntryForm({ contest }) {
   return (
     <div className="min-h-screen bg-white px-4 py-8">
       <div className="max-w-2xl mx-auto">
-        <div className="mb-12">
-          <Image
-            src="/gut-logo.png"
-            alt="БУТ"
-            width={150}
-            height={150}
-            className="object-contain"
-          />
-        </div>
-
         <h1 className="text-3xl font-semibold text-center mb-2">
           Отправить работу
         </h1>
